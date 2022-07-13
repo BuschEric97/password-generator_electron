@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="layout.css">
+    <script src="password-gen.js"></script>
 </head>
 
 <body>
@@ -24,10 +25,11 @@
             </div>
         </div>
         <div class="main-grid-item" id="generate-password">
-            Generate Password
-            
+            <button onclick="generate_password()">Generate Password</button>
         </div>
-        <div class="main-grid-item" id="copy-to-clipboard">Copy to Clipboard</div>
+        <div class="main-grid-item" id="copy-to-clipboard">
+            <button onclick="copy_to_clipboard()">Copy to Clipboard</button>
+        </div>
     </div>
 </body>
 
