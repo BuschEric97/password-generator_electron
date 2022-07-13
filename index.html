@@ -11,17 +11,27 @@
 
 <body>
     <div class="main-grid-container">
-        <div class="main-grid-item" id="password-result">Password Result</div>
+        <div class="main-grid-item" id="password-result-div">
+            <input type="text" id="password-result" value="password-result" readonly>
+        </div>
         <div class="main-grid-item" id="toggles">
             <div class="toggles-grid-container">
                 <div class="toggles-grid-item-text" id="word-count-text">Word Count</div>
-                <div class="toggles-grid-item" id="word-count">3</div>
+                <div class="toggles-grid-item" id="word-count">
+                    <input type="number" id="word-count-field" min="1" max="20" step="1" value="3">
+                </div>
                 <div class="toggles-grid-item-text" id="trailing-digit-text">Add Trailing Digit</div>
-                <div class="toggles-grid-item" id="trailing-digit">[toggle]</div>
+                <div class="toggles-grid-item" id="trailing-digit">
+                    <input type="checkbox" id="trailing-digit-checkbox">
+                </div>
                 <div class="toggles-grid-item-text" id="random-hyphen-text">Add Random Hyphen</div>
-                <div class="toggles-grid-item" id="random-hyphen">[toggle]</div>
+                <div class="toggles-grid-item" id="random-hyphen">
+                    <input type="checkbox" id="random-hyphen-checkbox">
+                </div>
                 <div class="toggles-grid-item-text" id="random-capital-text">Add Random Capital</div>
-                <div class="toggles-grid-item" id="random-capital">[toggle]</div>
+                <div class="toggles-grid-item" id="random-capital">
+                    <input type="checkbox" id="random-capital-checkbox">
+                </div>
             </div>
         </div>
         <div class="main-grid-item" id="generate-password">

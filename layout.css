@@ -1,4 +1,4 @@
-#password-result { grid-area: pwd-rslt; }
+#password-result-div { grid-area: pwd-rslt; }
 #toggles { grid-area: toggles; }
 #generate-password { grid-area: pwd-gen; text-align: end; }
 #copy-to-clipboard { grid-area: copy-clp; text-align: start; }
