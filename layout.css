@@ -1,0 +1,48 @@
+#password-result { grid-area: pwd-rslt; }
+#toggles { grid-area: toggles; }
+#generate-password { grid-area: pwd-gen; text-align: end; }
+#copy-to-clipboard { grid-area: copy-clp; text-align: start; }
+
+.main-grid-container {
+    display: grid;
+    grid-template-areas: 
+        'pwd-rslt pwd-rslt'
+        'toggles toggles'
+        'pwd-gen copy-clp';
+    gap: 10px;
+    padding: 10px;
+}
+
+.main-grid-item {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+#word-count-text { grid-area: wrd-txt; }
+#word-count { grid-area: wrd-tgl; }
+#trailing-digit-text { grid-area: dgt-txt; }
+#trailing-digit { grid-area: dgt-tgl; }
+#random-hyphen-text { grid-area: hyp-txt; }
+#random-hyphen { grid-area: hyp-tgl; }
+#random-capital-text { grid-area: cap-txt; }
+#random-capital { grid-area: cap-tgl; }
+
+.toggles-grid-container {
+    display: grid;
+    grid-template-areas:
+        'wrd-txt wrd-tgl'
+        'dgt-txt dgt-tgl'
+        'hyp-txt hyp-tgl'
+        'cap-txt cap-tgl';
+    padding: 10px;
+}
+
+.toggles-grid-item-text {
+    text-align: end;
+    padding: 10px;
+}
+.toggles-grid-item {
+    text-align: start;
+    padding: 10px
+}

@@ -5,10 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="layout.css">
 </head>
 
 <body>
-    <h1>Hello world!</h1>
+    <div class="main-grid-container">
+        <div class="main-grid-item" id="password-result">Password Result</div>
+        <div class="main-grid-item" id="toggles">
+            <div class="toggles-grid-container">
+                <div class="toggles-grid-item-text" id="word-count-text">Word Count</div>
+                <div class="toggles-grid-item" id="word-count">3</div>
+                <div class="toggles-grid-item-text" id="trailing-digit-text">Add Trailing Digit</div>
+                <div class="toggles-grid-item" id="trailing-digit">[toggle]</div>
+                <div class="toggles-grid-item-text" id="random-hyphen-text">Add Random Hyphen</div>
+                <div class="toggles-grid-item" id="random-hyphen">[toggle]</div>
+                <div class="toggles-grid-item-text" id="random-capital-text">Add Random Capital</div>
+                <div class="toggles-grid-item" id="random-capital">[toggle]</div>
+            </div>
+        </div>
+        <div class="main-grid-item" id="generate-password">
+            Generate Password
+            
+        </div>
+        <div class="main-grid-item" id="copy-to-clipboard">Copy to Clipboard</div>
+    </div>
 </body>
 
 </html>
