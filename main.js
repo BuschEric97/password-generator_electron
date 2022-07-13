@@ -4,11 +4,13 @@ const path = require("path");
 const loadMainWindow = () => {
     const mainWindow = new BrowserWindow({
         width : 900,
-        height: 600,
+        height: 300,
         webPreferences: {
             nodeIntegration: true
         }
     });
+
+    mainWindow.setMenuBarVisibility(false);
 
     mainWindow.loadFile(path.join(__dirname, "index.html"));
 }

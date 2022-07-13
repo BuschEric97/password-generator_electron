@@ -1,5 +1,5 @@
 #password-result-div { grid-area: pwd-rslt; }
-#toggles { grid-area: toggles; }
+#toggles { grid-area: toggles; padding-top: 10px; padding-bottom: 0; }
 #generate-password { grid-area: pwd-gen; text-align: end; }
 #copy-to-clipboard { grid-area: copy-clp; text-align: start; }
 
@@ -15,8 +15,6 @@
 
 .main-grid-item {
     text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
 }
 
 #word-count-text { grid-area: wrd-txt; }
@@ -31,18 +29,16 @@
 .toggles-grid-container {
     display: grid;
     grid-template-areas:
-        'wrd-txt wrd-tgl'
-        'dgt-txt dgt-tgl'
-        'hyp-txt hyp-tgl'
-        'cap-txt cap-tgl';
+        'wrd-txt wrd-tgl dgt-txt dgt-tgl'
+        'hyp-txt hyp-tgl cap-txt cap-tgl';
     padding: 10px;
 }
 
 .toggles-grid-item-text {
     text-align: end;
-    padding: 10px;
+    padding: 2px 10px;
 }
 .toggles-grid-item {
     text-align: start;
-    padding: 10px
+    padding: 2px 10px
 }
