@@ -13,6 +13,9 @@ const loadMainWindow = () => {
     mainWindow.setMenuBarVisibility(false);
 
     mainWindow.loadFile(path.join(__dirname, "index.html"));
+
+    // uncomment this line to show dev tools
+    //mainWindow.webContents.openDevTools();
 }
 
 // open main window on startup of app
