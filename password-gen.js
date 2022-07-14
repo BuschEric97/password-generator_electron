@@ -1,8 +1,9 @@
-const Notification = require('electron');
+const { clipboard } = require('electron');
 const fs = require('fs');
+const notifier = require('node-notifier');
 
-const NOTIFICATION_NOT_IMPLEMENTED_TITLE = 'ERROR!';
-const NOTIFICATION_NOT_IMPLEMENTED_BODY = 'Feature not yet implemented!';
+const NOTIFICATION_CLIPBOARD_TITLE = 'Password Generator';
+const NOTIFICATION_CLIPBOARD_BODY = 'Password copied to clipboard!';
 
 function generate_password() {
     var new_password = '';
@@ -55,7 +56,12 @@ function generate_password() {
 }
 
 function copy_to_clipboard() {
-    document.getElementById('password-result').value = 'Function not yet implemented!';
+    password = document.getElementById('password-result').value;
+    clipboard.writeText(password);
+    notifier.notify({
+        title: NOTIFICATION_CLIPBOARD_TITLE,
+        message: NOTIFICATION_CLIPBOARD_BODY
+    });
 }
 
 // Uses the file 'wordlist.txt' to find and return the next random string

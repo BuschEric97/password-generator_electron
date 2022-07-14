@@ -6,7 +6,8 @@ const loadMainWindow = () => {
         width : 900,
         height: 250,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            contextIsolation: false
         }
     });
 

@@ -20,5 +20,8 @@
   "homepage": "https://github.com/BuschEric97/password-generator_electron#readme",
   "devDependencies": {
     "electron": "^19.0.8"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
   }
 }
