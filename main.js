@@ -4,7 +4,7 @@ const path = require("path");
 const loadMainWindow = () => {
     const mainWindow = new BrowserWindow({
         width : 900,
-        height: 300,
+        height: 250,
         webPreferences: {
             nodeIntegration: true
         }

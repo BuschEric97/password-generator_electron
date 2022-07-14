@@ -13,10 +13,33 @@ input[type=text] {
     font-family: 'Courier New', Courier, monospace;
 }
 
-input[type=checkbox] {
+.checkbox {
+    position: relative;
+    display: inline-block;
     height: 30px;
     width: 30px;
 }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 10px;
+}
+input[type=checkbox] {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+input[type=checkbox]:checked + .slider {
+    background-color: dodgerblue;
+}
+
 
 input[type=number] {
     height: 30px;
@@ -33,4 +56,8 @@ button {
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     background-color: dodgerblue;
+    outline: none;
+}
+button:active {
+    background-color: deepskyblue;
 }
