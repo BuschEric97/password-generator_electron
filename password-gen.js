@@ -5,6 +5,11 @@ const NOTIFICATION_NOT_IMPLEMENTED_TITLE = 'ERROR!';
 const NOTIFICATION_NOT_IMPLEMENTED_BODY = 'Feature not yet implemented!';
 
 function generate_password() {
+    let word_count = document.getElementById('word-count-field').value;
+    let add_digit = document.getElementById('trailing-digit-checkbox').checked;
+    let add_hyphen = document.getElementById('random-hyphen-checkbox').checked;
+    let add_capital = document.getElementById('random-capital-checkbox').checked;
+
     document.getElementById('password-result').value = 'placeholder_password';
 }
 
@@ -25,13 +30,14 @@ function get_random_word() {
     return selected_word;
 }
 
+// Randomly capitalize one of the letters in the input string
 function random_capital(str) {
     // if the input string does not contain any letters, return it unmodified
     if (/^[a-z]*$/.test(str) == false) {
         return str;
     }
 
-    // randomly capitalize one of the letters in the string
+    // try capitalizing a letter until we actually get a letter
     while (true) {
         let char_index = Math.floor(Math.random() * str.length);
 
