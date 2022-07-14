@@ -11,6 +11,8 @@ input[type=text] {
     border-width: 0;
     padding: 0 5px;
     font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    background-color: #9e9e9e;
 }
 
 .checkbox {
@@ -26,7 +28,7 @@ input[type=text] {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: lightgrey;
     -webkit-transition: .2s;
     transition: .2s;
     border-radius: 10px;
@@ -47,6 +49,8 @@ input[type=number] {
     border-width: 0;
     padding: 0 5px;
     font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    background-color: lightgrey;
 }
 
 button {
