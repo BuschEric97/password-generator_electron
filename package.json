@@ -4,24 +4,69 @@
   "description": "New cross-platform version of my original Windows Password Generator app using Electron",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --no-sandbox",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BuschEric97/password-generator_electron.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eric Busch",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BuschEric97/password-generator_electron/issues"
   },
   "homepage": "https://github.com/BuschEric97/password-generator_electron#readme",
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.64",
+    "@electron-forge/maker-deb": "^6.0.0-beta.64",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.64",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.64",
+    "@electron-forge/maker-zip": "^6.0.0-beta.64",
     "electron": "^19.0.8"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "node-notifier": "^10.0.1"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "password_generator_electron",
+            "exe": "PasswordGenerator_Windows.exe"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "platforms": [
+            "darwin"
+          ],
+          "config": {
+            "options": {
+              "maintainer": "Eric Busch",
+              "name": "passwordgen",
+              "productName": "Password Generator"
+            }
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "options": {
+              "maintainer": "Eric Busch",
+              "name": "passwordgen",
+              "productName": "Password Generator"
+            }
+          }
+        }
+      ]
+    }
   }
 }
