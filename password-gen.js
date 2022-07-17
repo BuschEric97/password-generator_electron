@@ -1,6 +1,7 @@
 const { clipboard } = require('electron');
 const fs = require('fs');
 const notifier = require('node-notifier');
+const path = require("path");
 
 const NOTIFICATION_CLIPBOARD_TITLE = 'Password Generator';
 const NOTIFICATION_CLIPBOARD_BODY = 'Password copied to clipboard!';
@@ -70,7 +71,7 @@ function get_random_word() {
     let file_index = Math.floor(Math.random() * 7776);
 
     // get the next random word
-    let file_text = fs.readFileSync('./wordlist.txt').toString();
+    let file_text = fs.readFileSync(path.join(__dirname, "wordlist.txt")).toString();
     let selected_word = file_text.split('\n')[file_index].split('\t')[1];
 
     // return the randomly selected word
